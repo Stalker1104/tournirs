@@ -173,6 +173,10 @@ do {
 while (pro == 0);
 alert("Сейчас на экане будет коечто написано.\nПришли это Андрею в личеу любым удобным способом.")
 document.write("bag=");
-for (i = 0; i < bag.length; i++) { document.write("\n" + bag[i]); }
+for (i = 0; i < bag.length; i++) {
+    document.write(" \"")
+    document.write(bag[i]);
+    document.write("\",")
+}
 document.write("\n|nom=" + nom + "\n|hp=" + hp + "\n|maxdmg=" + maxdmg + "\n|person=" + person + "\n|name= " + name + "")
     /*var boss = getRandomInt(1, 4)*/
