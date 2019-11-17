@@ -104,8 +104,44 @@ if (index == 1) {
     var name = prompt("Как зовут твоего пресонажа?")
 
 }
-if (index == 2) {
+else if (index == 2) {
     var kod = prompt("Введи код который тебе дали когда ты сохранялся");
+}
+if (kod == "#a0000") {
+    person = 2;
+    name = "Иван";
+    maxdmg = 112;
+    hp = 131;
+    nom = 0;
+    bag();
+
+}
+if (kod == "#f3270") {
+    person = 0;
+    name = "";
+    maxdmg = 0;
+    hp = 0;
+    nom = 0;
+    bag();
+
+}
+if (kod == "g0400") {
+    person = 0;
+    name = "";
+    maxdmg = 0;
+    hp = 0;
+    nom = 0;
+    bag();
+
+}
+if (kod == "#h5381") {
+    person = 0;
+    name = "";
+    maxdmg = 0;
+    hp = 0;
+    nom = 0;
+    bag();
+
 }
 
 
