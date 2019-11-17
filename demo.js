@@ -115,7 +115,7 @@ do {
         var boss = getRandomInt(1, 4);
         if (boss == 1) {
             bossname = "Каменный голем"
-            bosshp = 750;
+            bosshp = 875;
         } else if (boss == 2) {
             bossname = "Ледяной голем"
             bosshp = 1400;
@@ -135,8 +135,6 @@ do {
                 }
             } else if (warmenu = "admin") {
                 bosshp = 0;
-            }else if (warmenu = ок||warmenu = ok||warmenu = OK||warmenu = ОК){
-                bosshp+=bosshp;
             }
             if (nhp <= 0) {
                 nhp = hp;
@@ -173,6 +171,6 @@ do {
 while (pro == 0);
 alert("Сейчас на экане будет коечто написано.\nПришли это Андрею в личеу любым удобным способом.")
 document.write("bag=");
-for (i = 0; i < bag.length; i++) { document.write(bag[i]); }
+for (i = 0; i < bag.length; i++) { document.write("\n" + bag[i]); }
 document.write("\n|nom=" + nom + "\n|hp=" + hp + "\n|maxdmg=" + maxdmg + "\n|person=" + person + "\n|name= " + name + "")
-    /*var boss = getRandomInt(1, 4)*/
+    /*var boss = getRandomInt(1, 4)*/ 
