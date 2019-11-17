@@ -115,7 +115,7 @@ do {
         var boss = getRandomInt(1, 4);
         if (boss == 1) {
             bossname = "Каменный голем"
-            bosshp = 875;
+            bosshp = 750;
         } else if (boss == 2) {
             bossname = "Ледяной голем"
             bosshp = 1400;
@@ -135,6 +135,8 @@ do {
                 }
             } else if (warmenu = "admin") {
                 bosshp = 0;
+            }else if (warmenu = ок||warmenu = ok||warmenu = OK||warmenu = ОК){
+                bosshp+=bosshp;
             }
             if (nhp <= 0) {
                 nhp = hp;
