@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.but1 {
+    background: navy;
+    color: white;
+    top: 100px;
+    margin-top: 100px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+
+.image {
+    position: absolute;
+    left: 480px;
+}
+
+#fight {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: none;
+}
+
+#run_away_1.nohide {
+    display: none;
+}
+
+#first {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: block;
+}
+
+#first.nohide {
+    display: none;
+}
+
+#all_kust {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: none;
+}
+
+#all_kust.nohide {
+    display: block;
+}
+
+#fis_dmg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: none;
+}
+
+#fis_dmg.nohide {
+    display: block;
+}
+
+#mag_dmg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: none;
+}
+
+#mag_dmg.nohide {
+    display: block;
+}
+
+#mor_dmg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: none;
+}
+
+#mor_dmg.nohide {
+    display: block;
+}
+
+#run_away_1 {
+    position: absolute;
+    display: block;
+}
+
+#ponal.nohide {
+    display: none;
+}
+
+#ponal {
+    position: absolute;
+    display: block;
+}
+
+#fight.nohide {
+    display: block;
+}
+
+.wrapper {
+    background: white;
+}
+
+#pers {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    display: none;
+}
+
+#pers.nohide {
+    display: block;
+}
+
+.wrappers {
+    background: white;
+}

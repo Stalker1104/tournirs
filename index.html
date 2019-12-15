@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="demo.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+    <!--<input type="button" class="b1" value="Синяя кнопка">-->
+    <!--<div class="but1">
+        <button id="mybutton">кнопка</button>
+        <script language="javascript">
+            document.getElementById('mybutton').onclick = function() {
+
+                n++;
+                alert(n);
+
+            }
+        </script>
+    </div>-->
+    <script>
+        alert("Привет! Ну что ж начнём?");
+        var index = prompt("1-Я новичок \n2- У мeня уже есть перонаж");
+        if (index == 1) {
+            alert("Выбери своего персонажа");
+            do {
+                var person = prompt("1 - Дварф\n2 - Вампир\n3 - Маг\n4 - Механик\n5 - Берсерк")
+                if (person == 1) {
+                    var person1 = confirm("Очень маленький, по нему сложно попасть.\n-25% от урона противника.")
+                }
+                if (person == 2) {
+                    var person1 = confirm("Просто вампир, пьёт кровь и Балтика 5.\nВостанавливает 2% здоровья при каждом ударе.")
+                }
+                if (person == 3) {
+                    var person1 = confirm("Владеет магией, может заколдовать вещи.\n+25% от характеристикам вещей(не оружия).")
+                }
+                if (person == 4) {
+                    var person1 = confirm("50-летний механик, может улучшить орудие.\n+30 к урону 1 выстрела.")
+                }
+                if (person == 5) {
+                    var person1 = cofirm("Может разрезать сталь мизинцем.\n+50% к ближнему оружию.")
+                }
+            } while (person1 != true);
+            var personaj = 0;
+            if (person == 1) {
+                def = 0.25;
+                personaj = "Дварф";
+            }
+            if (person == 2) {
+                rec = 0.02;
+                personaj = "Вампир";
+            }
+            if (person == 3) {
+                zak = 0.25;
+                personaj = "Маг";
+            }
+            if (person == 4) {
+                dopdmg = 30;
+                personaj = "Механик";
+            }
+            if (person == 5) {
+                closedmg = 0.5;
+                personaj = "Берсерк";
+            }
+
+            var name = prompt("Как зовут твоего пресонажа?\nНе больше 14 символов.")
+
+        } else if (index == 2) {
+            var kod = prompt("Введи код который тебе дали когда ты сохранялся");
+            if (kod == "admin") {
+                person = -1;
+                name = "Андрей";
+                maxdmg = 100;
+                hp = 100;
+            }
+            if (kod == "tester1") {
+                person = 0;
+                name = "Максим";
+                maxdmg = 100;
+                hp = 100;
+            }
+            if (kod == "tester2") {
+                person = 0;
+                name = "Даня";
+                maxdmg = 100;
+                hp = 100;
+            }
+            if (kod == "tester3") {
+                person = 0;
+                name = "Ваня(предатель)";
+                maxdmg = 100;
+                hp = 100;
+            }
+            if (kod == "tester4") {
+                person = 0;
+                name = "Тестер";
+                maxdmg = 100;
+                hp = 100;
+            }
+            alert("Спасибо что вернулись," + name + "!");
+            if (person == 0) {
+                personaj = "Тестер";
+            }
+            if (person == -1) {
+                personaj = "Админ";
+            }
+            if (person == 1) {
+                def = 0.25;
+                personaj = "Дварф";
+            }
+            if (person == 2) {
+                rec = 0.02;
+                personaj = "Вампир";
+            }
+            if (person == 3) {
+                zak = 0.25;
+                personaj = "Маг";
+            }
+            if (person == 4) {
+                dopdmg = 30;
+                personaj = "Механик";
+            }
+            if (person == 5) {
+                closedmg = 0.5;
+                personaj = "Берсерк";
+            }
+        }
+        var money;
+    </script>
+
+
+
+    <img src="1.png" style="position: absolute;left:300px;">
+    <button id="ponal" style="text-align:left; width:200px;background-color: white;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;">Зелёные кнопки - работают. Красные кнопки - не работают. Нажмите чтобы убрать эту надпись.</button>
+    <button id="normal" style="background-color:green; position: absolute;top:270px;left: 378px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 99px;height: 61px;">Обычный бой</button>
+    <button id="hell" style="background-color:red;position: absolute;top: 270px;left: 630px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 99px;height: 61px;">Ад</button>
+    <button id="neww" style="background-color:red;position: absolute;top: 270px;left: 504px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 99px;height: 61px;">...</button>
+    <button id="market" style="background-color:red;position: absolute;top: 345px;left: 360px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 415px;height: 30px;">магазин</button>
+    <button id="zadania" style="background-color:red;position: absolute;top: 380px;left: 360px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 100px;height: 30px;">Задания</button>
+
+    <button id="person2" style="background-color:green; position:absolute;top: 380px;left: 465px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 100px;height: 30px;">Персонаж</button>
+    <button id="bag" style="background-color:red; position:absolute;top: 380px;left: 570px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 100px;height: 30px;">сумка</button>
+    <button id="new1" style="background-color:red;position: absolute;top: 380px;left: 675px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 100px;height: 30px;">...</button>
+    <button id="exit" style="background-color:green;position: absolute;top: 450px;left: 525px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 100px;height: 50px;">ВЫЙТИ</button>
+
+    <div id="fight">
+
+
+        <div class="wrapper">
+            <img src="fight.png" style="position: absolute;left:300px;top:15px;">
+            <img src="hp.png" style="position: absolute;left:310px;top:20px">
+            <img src="bosshp.png" style="position: absolute;left:710px;top:20px">
+            <img src="mp.png" style="position: absolute;left:405px;top:20px;">
+            <button id="atack" style="position: absolute;top:375px;left: 350px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 400px;height: 25px;">Атака</button>
+            <button id="run_away_1" style="position: absolute;top:405px;left: 500px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 100px;height: 25px;">СБЕЖАТЬ</button>
+
+            <div id="d1" style="position:absolute;left:320px;top:15px">Your</div>
+            <div id="mp" style="position:absolute;left:420px;top:15px">Your</div>
+            <div id="d2" style="position: absolute;left:720px;top:15px">Boss</div>
+        </div>
+        <script src="demo.js"></script>
+        <script>
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            run_away_1.addEventListener("click", run);
+
+            function run() {
+                console.log("run away from boss");
+                var a = getRandomInt(0, 5);
+                if (a == 0) {
+                    alert("Вам очень повезло и вы смогли убежать!");
+                    fight.classList = "";
+                } else {
+                    alert("Вам не повезло и вам прийдётся бится дальше!");
+                    run_away_1.classList = "nohide"
+                }
+
+            }
+
+
+
+
+
+
+
+            atack.addEventListener("click", fnc);
+            var flag = 1;
+
+            function fnc() {
+                if (flag) {
+                    console.log("atack");
+
+                    d1.innerHTML = nhp; //d1 - данные по противнику
+                    nhp -= getRandomInt(bossmindmg, bossmaxdmg);
+
+                    d2.innerHTML = nbosshp; //d2 - данные по количеству жизней
+                    nbosshp -= getRandomInt(mindmg, maxdmg);
+
+                    if (nhp <= 0) {
+                        nhp = hp;
+                        nbosshp = bosshp;
+                        fight.classList = "";
+
+                    } else if (nbosshp <= 0) {
+                        xp += getRandomInt(1, 6);
+                        nhp = hp;
+                        nbosshp = bosshp;
+                        hp += 1;
+                        maxdmg += 2;
+                        var chans_money = getRandomInt(0, 4);
+                        var win_money = getRandomInt(1, 11);
+                        if (chans_money == 0) {
+                            money += win_money;
+                            alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "\nТакже вы получили " + win_money + " монет!");
+                        } else if (chanse > 0) {
+                            win = getRandomInt(0, 29);
+                            winth = all[win];
+                            bag[nom] = winth;
+                            nom++;
+                            alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "\nТакже вы получили " + winth + "!");
+                        } else {
+                            alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "");
+                        }
+                        fight.classList = "";
+                        if (xp >= 100) {
+                            xp -= 100;
+                            lvl++;
+                        }
+
+                    }
+                }
+            }
+        </script>
+    </div>
+
+    <div id="pers">
+        <div class="wrappers">
+            <img src="person.png" style="position: absolute;left:300px;">
+            <!---->
+            <img src="hp.png" style="position: absolute;left:350px;top:320px">
+            <img src="maxdmg.png" style="position: absolute;left:350px;top:360px;">
+            <img src="mindmg.jpg" style="position: absolute;left:350px;top:400px;">
+            <img src="personaj.png" style="position: absolute;left:350px;top:440px;">
+            <div id="name_person" style="position:absolute;left:350px;top:272px;width: 170px;text-align: center;"></div>
+            <!--<button id="change_name" style="position:absolute;left: 531px;top:272px;width: 118px;text-align: center;">Сменить имя</button>
+            -->
+            <div id="hp_person" style="position: absolute;left:370px;top:320px"></div>
+            <div id="maxdmg_person" style="position: absolute;left:370px;top:360px"></div>
+            <div id="mindmg_person" style="position: absolute;left:370px;top:400px"></div>
+            <div id="personaj_person" style="position: absolute;left:370px;top:440px"></div>
+            <div id="money_person"></div>
+            <button id="exit_person" style="position: absolute;top: 480px;left: 350px;border-top:0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 300px;height:25px;">Выйти</button>
+            <script>
+                money_person.innerHTML = money;
+                name_person.innerHTML = name;
+                hp_person.innerHTML = hp;
+                maxdmg_person.innerHTML = maxdmg;
+                mindmg_person.innerHTML = mindmg;
+                personaj_person.innerHTML = personaj;
+
+                ////////////////////////////////////////
+
+                exit_person.onclick = function() {
+                        pers.classList = "";
+                    }
+                    /*change_name.onclick = function() {
+                        name = prompt("Напишите своё новое имя.\nНе более 14 символов!");
+                    }*/
+            </script>
+        </div>
+    </div>
+    <!--<div>Один</div>
+    <div style="display:none;">Два</div>-->
+    <script>
+        /*var divs = document.querySelectorAll('div')
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                i = 0;*/
+
+        normal.onclick = function() {
+            console.log("new");
+            fight.classList = "nohide";
+
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            d2.innerHTML = nbosshp = getRandomInt(500, 750);
+        }
+
+        person2.onclick = function() {
+            console.log("personlalalalal");
+            pers.classList = "nohide";
+        }
+
+
+        hell.onclick = function() {
+            /*divs[i].style.display = "none";
+            i = 0;
+            divs[i].style.display = "block";*/
+        }
+        exit.onclick = function() {
+            alert("Сейчас на экане будет кое-что написано.\nПришли это Андрею в личку любым удобным способом.")
+            document.write("nom=" + nom + " | hp=" + hp + " | maxdmg=" + maxdmg + " | person=" + person + " | name= " + name + " | ")
+            document.write("bag=");
+            for (i = 0; i < bag.length; i++) {
+                document.write(bag[i] + ",");
+            }
+        }
+
+        ponal.onclick = function() {
+            ponal.classList = "nohide"
+        }
+    </script>
+
+</body>
+
+</html>
