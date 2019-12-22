@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magazin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat:700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div id="magasin"><button id="get_armor" style="position: absolute;top:250px;left: 1100px;width: 100px;height: 100px;">Купить</button>
+        <button id="get_helmet" style="position: absolute;top:400px;left: 1100px;width: 100px;height: 100px;">Купить</button>
+        <button id="get_weapon" style="position: absolute;top:100px;left: 1100px;width: 100px;height: 100px;">Купить</button>
+        <button id="exit_magasin" style="position: absolute;top:550px;left: 650px;width: 100px;height: 50px;">Выйти</button>
+        <button id="sumka">Сумка</button>
+        <img src="chest.png" alt="" style="position: absolute;top:100px;left:300px;">
+        <img src="chest.png" alt="" style="position: absolute;top:250px;left:300px;">
+        <img src="chest.png" alt="" style="position: absolute;top:400px;left:300px;">
+        <img src="money.png" alt="" style="position: absolute;left:600px;">
+        <div id="money_count" style="position: absolute;left: 650px;top:5px;"></div>
+        <div id="weapons" style="position: absolute;top: 140px;left:450px;width: 500px;">Кухонный нож, Огненый нож, Нож из сосульки, Булава, Острый камень, Доска с гвоздём, Бита, Лук, Посох, Магический камень, Пистолет, Регенерирующийся камень, Чуйка, Харчок</div>
+        <div id="helmets" style="position: absolute;top: 290px;left:450px;width: 500px;">Деревянный шлем, Медный шлем, Каменный шлем, Железный шлем, Серебряный шлем,Золотой шлем, Алмазный шлем</div>
+        <div id="armors" style="position: absolute;top: 440px;left:450px;width: 500px;">Деревянные латы, Медные латы, Каменные латы, Железный латы, Серебряные латы, Золотые латы, Алмазные латы</div>
+        <div id="cost_weapon" style="position: absolute;top:110px;left:1000px">Цена:</div>
+        <div id="cost_helmet" style="position: absolute;top:260px;left:1000px">Цена:</div>
+        <div id="cost_armor" style="position: absolute;top:410px;left:1000px">Цена:</div>
+        <div id="cost_weapon" style="position: absolute;top:140px;left:1000px">5000</div>
+        <div id="cost_helmet" style="position: absolute;top:290px;left:1000px">3000</div>
+        <div id="cost_armor" style="position: absolute;top:440px;left:1000px">1000</div>
+        <div id="weapons_1" style="position: absolute;top: 110px;left:450px;width: 640px;">Возможные награды:</div>
+        <div id="helmets_1" style="position: absolute;top: 260px;left:450px;width: 640px;">Возможные награды:</div>
+        <div id="armors_1" style="position: absolute; top: 410px;left:450px;width: 640px;">Возможные награды:</div>
+        <script>
+            var allnames = new Array("Кухонный нож\n", "Огненый нож\n", "Нож из сосульки\n", "Булава\n", "Острый камень\n",
+                "Доска с гвоздём\n", "Бита\n", "Лук\n", "Посох\n", "Магический камень\n", "Пистолет\n", "Регенерирующийся камень\n",
+                "Чуйка\n", "Харчок\n" /*14*/ , "Деревянный шлем\n", "Медный шлем\n", "Каменный шлем\n", "Железный шлем\n", "Серебряный шлем\n",
+                "Золотой шлем\n", "Алмазный шлем\n" /*21*/ , "Деревянные латы\n", "Медные латы\n", "Каменные латы\n", "Железный латы\n",
+                "Серебряные латы\n", "Золотые латы\n", "Алмазные латы\n" /*28*/ );
+
+            var alldmg = new Array(3, 5, 2, 6, 1, 3, 4, 10, 8, 11, 17, 3, 14, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            var allhp = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 10, 13, 15, 25, 35, 50, 10, 15, 17, 25, 35, 50, 75);
+            var bag = new Array();
+            var nom = 0;
+            var item;
+            var number;
+            var money = 10000;
+            var nexvataet;
+            money_count.innerHTML = money;
+            bag[0] = "Здесь ничего нет";
+            bag[1] = "Здесь ничего нет";
+            bag[2] = "Здесь ничего нет";
+            bag[3] = "Здесь ничего нет";
+            bag[4] = "Здесь ничего нет";
+            bag[5] = "Здесь ничего нет";
+            bag[6] = "Здесь ничего нет";
+            bag[7] = "Здесь ничего нет";
+            bag[8] = "Здесь ничего нет";
+            bag[9] = "Здесь ничего нет";
+
+
+
+
+            /*
+            exit_sumka.onclick = function() {
+                console.log("exit bag");
+                bag1.classList = "hide";
+                home.classList = "nohide";
+            }*/
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            exit_magasin.onclick = function() {
+                magasin.classList = "hide";
+            }
+            get_weapon.onclick = function() {
+                if (money >= 5000) {
+                    for (nom = 0; nom < 10; nom++) {
+                        if (bag[nom] == undefined || bag[nom] == "Здесь ничего нет") {
+                            break;
+                        }
+                    }
+                    number = getRandomInt(0, 15);
+                    item = allnames[number];
+                    bag[nom] = item;
+                    /*if (nom == 0) {
+                        name_item_1.innerHTML = item;
+                        number_1 = number;
+                    }
+                    if (nom == 1) {
+                        name_item_2.innerHTML = item;
+                        number_2 = number;
+                    }
+                    if (nom == 2) {
+                        name_item_3.innerHTML = item;
+                        number_3 = number;
+                    }
+                    if (nom == 3) {
+                        name_item_4.innerHTML = item;
+                        number_4 = number;
+                    }
+                    if (nom == 4) {
+                        name_item_5.innerHTML = item;
+                        number_5 = number;
+                    }
+                    if (nom == 5) {
+                        name_item_6.innerHTML = item;
+                        number_6 = number;
+                    }
+                    if (nom == 6) {
+                        name_item_7.innerHTML = item;
+                        number_7 = number;
+                    }
+                    if (nom == 7) {
+                        name_item_8.innerHTML = item;
+                        number_8 = number;
+                    }
+                    if (nom == 8) {
+                        name_item_9.innerHTML = item;
+                        number_9 = number;
+                    }
+                    if (nom == 9) {
+                        name_item_10.innerHTML = item;
+                        number_10 = number;
+                    }
+                    nom++;*/
+                    money -= 5000;
+                    money_count.innerHTML = money;
+                    alert("Вы получили " + item + " !");
+                } else {
+                    nexvataet = 5000 - money;
+                    alert("Вам нехватает " + nexvataet + "!")
+                }
+
+            }
+            get_armor.onclick = function() {
+                if (money >= 3000) {
+                    for (nom = 0; nom < 10; nom++) {
+                        if (bag[nom] == undefined || bag[nom] == "Здесь ничего нет") {
+                            break;
+                        }
+                    }
+                    number = getRandomInt(21, 28);
+                    item = allnames[number];
+                    bag[nom] = item;
+                    /*if (nom == 0) {
+                    name_item_1.innerHTML = item;
+                    number_1 = number;
+                    }
+                    if (nom == 1) {
+                    name_item_2.innerHTML = item;
+                    number_2 = number;
+                    }
+                    if (nom == 2) {
+                    name_item_3.innerHTML = item;
+                    number_3 = number;
+                    }
+                    if (nom == 3) {
+                    name_item_4.innerHTML = item;
+                    number_4 = number;
+                    }
+                    if (nom == 4) {
+                    name_item_5.innerHTML = item;
+                    number_5 = number;
+                    }
+                    if (nom == 5) {
+                    name_item_6.innerHTML = item;
+                    number_6 = number;
+                    }
+                    if (nom == 6) {
+                    name_item_7.innerHTML = item;
+                    number_7 = number;
+                    }
+                    if (nom == 7) {
+                    name_item_8.innerHTML = item;
+                    number_8 = number;
+                    }
+                    if (nom == 8) {
+                    name_item_9.innerHTML = item;
+                    number_9 = number;
+                    }
+                    if (nom == 9) {
+                    name_item_10.innerHTML = item;
+                    number_10 = number;
+                    }
+                    nom++;*/
+                    money -= 3000;
+                    money_count.innerHTML = money;
+                    alert("Вы получили " + item + " !");
+                } else {
+                    nexvataet = 3000 - money;
+                    alert("Вам нехватает " + nexvataet + "!")
+                }
+            }
+
+            get_helmet.onclick = function() {
+                if (money >= 1000) {
+                    for (nom = 0; nom < 10; nom++) {
+                        if (bag[nom] == undefined || bag[nom] == "Здесь ничего нет") {
+                            break;
+                        }
+                    }
+                    number = getRandomInt(15, 22);
+                    item = allnames[number];
+                    bag[nom] = item;
+                    /*if (nom == 0) {
+                        name_item_1.innerHTML = item;
+                        number_1 = number;
+                    }
+                    if (nom == 1) {
+                        name_item_2.innerHTML = item;
+                        number_2 = number;
+                    }
+                    if (nom == 2) {
+                        name_item_3.innerHTML = item;
+                        number_3 = number;
+                    }
+                    if (nom == 3) {
+                        name_item_4.innerHTML = item;
+                        number_4 = number;
+                    }
+                    if (nom == 4) {
+                        name_item_5.innerHTML = item;
+                        number_5 = number;
+                    }
+                    if (nom == 5) {
+                        name_item_6.innerHTML = item;
+                        number_6 = number;
+                    }
+                    if (nom == 6) {
+                        name_item_7.innerHTML = item;
+                        number_7 = number;
+                    }
+                    if (nom == 7) {
+                        name_item_8.innerHTML = item;
+                        number_8 = number;
+                    }
+                    if (nom == 8) {
+                        name_item_9.innerHTML = item;
+                        number_9 = number;
+                    }
+                    if (nom == 9) {
+                        name_item_10.innerHTML = item;
+                        number_10 = number;
+                    }
+                    nom++;*/
+                    money -= 1000;
+                    money_count.innerHTML = money;
+                    alert("Вы получили " + item + " !");
+                } else {
+                    nexvataet = 1000 - money;
+                    alert("Вам нехватает " + nexvataet + "!")
+                }
+            }
+            sumka.onclick = function() {
+                alert(bag);
+            }
+        </script>
+    </div>
+
+
+
+
+</body>
+
+</html>
