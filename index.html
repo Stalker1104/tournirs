@@ -1627,88 +1627,33 @@
                         hp += 1;
                         maxdmg += 2;
                         var chanse = getRandomInt(0, 5);
-                        var chans_money = getRandomInt(0, 4);
                         var win_money = getRandomInt(10, 76);
 
                         //контрольная точка
 
-                        if (chans_money == 0) {
+                        /*if (chans_money == 0) {
                             money += win_money;
                             alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "\nТакже вы получили " + win_money + " монет!");
-                        } else if (chanse == 0) {
+                        } else */
+                        if (chanse == 0) {
 
 
                             nom++;
                             //alert(bag);
+                            take_reward.classList = "nohide";
                             number = getRandomInt(0, 28);
                             item = allnames[number];
-                            reward_discription.innerHTML = "Поздравляем! Вы получили " + item + "!"
+                            reward_discription.innerHTML = "Поздравляем! Вы получили " + item + "! И ещё вы получили " + win_money + " монет!";
+                            money += win_money;
                             reward_hp.innerHTML = "+" + allhp[number];
                             reward_dmg.innerHTML = "+" + alldmg[number];
                             take_reward.classList = "nohide";
 
-                        } else if (chanse == 0 && nbosshp <= 0) {
-                            if (nom < 10) {
-                                for (nom = 0; nom < 10; nom++) {
-                                    if (bag[nom] == undefined || bag[nom] == "----------------") {
-                                        break;
-                                    }
-                                }
-                                number = getRandomInt(0, 28);
-                                item = allnames[number];
-                                bag[nom] = item;
-                                if (nom == 0) {
-                                    name_item_1.innerHTML = item;
-                                    number_1 = number;
-                                }
-                                if (nom == 1) {
-                                    name_item_2.innerHTML = item;
-                                    number_2 = number;
-                                }
-                                if (nom == 2) {
-                                    name_item_3.innerHTML = item;
-                                    number_3 = number;
-                                }
-                                if (nom == 3) {
-                                    name_item_4.innerHTML = item;
-                                    number_4 = number;
-                                }
-                                if (nom == 4) {
-                                    name_item_5.innerHTML = item;
-                                    number_5 = number;
-                                }
-                                if (nom == 5) {
-                                    name_item_6.innerHTML = item;
-                                    number_6 = number;
-                                }
-                                if (nom == 6) {
-                                    name_item_7.innerHTML = item;
-                                    number_7 = number;
-                                }
-                                if (nom == 7) {
-                                    name_item_8.innerHTML = item;
-                                    number_8 = number;
-                                }
-                                if (nom == 8) {
-                                    name_item_9.innerHTML = item;
-                                    number_9 = number;
-                                }
-                                if (nom == 9) {
-                                    name_item_10.innerHTML = item;
-                                    number_10 = number;
-                                }
-                                nom++;
-
-                                money += win_money;
-
-                                alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "\nТакже вы получили " + item + " и " + win_money + " монет !");
-                            } else {
-                                money += win_money;
-                                alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "\nТакже вы получили " + win_money + " монет и ты мог получить что-то но твой инвентарь полон!");
-                            }
                         } else {
-                            alert("-----------------------------ПОБЕДА-----------------------------\nВаш максиальный запас здоровья увеличен до " + hp + " \nВаш максимальный урон увеличен до " + maxdmg + "");
+                            alert("К сожалению вы ничего не получили...");
+                            home.classList = "nohide";
                         }
+
                         if (xp >= 100) {
                             xp -= 100;
                             lvl++;

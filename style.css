@@ -285,6 +285,10 @@
     display: block;
 }
 
+#fight.hide {
+    display: none;
+}
+
 .wrapper {
     background: white;
 }
