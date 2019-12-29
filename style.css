@@ -101,6 +101,31 @@
     display: none;
 }
 
+#run_away_1.nonohide {
+    display: block;
+}
+
+#take_reward {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#take_reward.nohide {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#take_reward.hide {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
 #first {
     width: 100%;
     height: 100%;
@@ -278,4 +303,48 @@
 
 .wrappers {
     background: white;
+}
+
+#start.hide {
+    display: none;
+}
+
+#start.hide {
+    display: none;
+}
+
+#choose.nohide {
+    display: block;
+}
+
+#choose.hide {
+    display: none;
+}
+
+#choose {
+    display: none;
+}
+
+#beginerdiv.nohide {
+    display: block;
+}
+
+#beginerdiv.hide {
+    display: none;
+}
+
+#beginerdiv {
+    display: none;
+}
+
+#testersdiv.nohide {
+    display: block;
+}
+
+#testersdiv.hide {
+    display: none;
+}
+
+#testersdiv {
+    display: none;
 }
