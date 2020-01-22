@@ -1698,7 +1698,7 @@
                 }
             }
             dmg_poision_use.onclick = function() {
-                if (dmg_poisions_used == false) {
+                if (dmg_poisions_used == false && dmg_poisions_kol>0) {
                     dmg_poisions_kol--;
                     dmg_poision_use.innerHTML = "Зелье урона x" + dmg_poisions_kol;
                     maxdmg_before_use_poision = maxdmg;
@@ -1713,7 +1713,8 @@
                     alert("Использовано:Зелье урона!\nВаш урон увеличен в 2 раза на весь бой!")
                     dmg_poision_use.classList = "hide";
                     dmg_poisions_used = true;
-                } else {
+                    if(dmg_poisions_kol<1){dmg_poision_use.classList="hide"}
+                } else if(dmg_poisions_used==true){
                     alert("Нельзя использовать больше 1 раза зa бой!");
                 }
             }
