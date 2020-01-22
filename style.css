@@ -35,6 +35,8 @@
     display: block;
 }
 
+
+
 #poisions_atack {
     display: none;
 }
@@ -48,7 +50,7 @@
 }
 
 
-/*#dmg_poision_use {
+#dmg_poision_use {
     display: none;
 }
 
@@ -59,7 +61,7 @@
 #dmg_poision_use.nohide {
     display: block;
 }
-*/
+
 
 #poisions {
     display: none;
