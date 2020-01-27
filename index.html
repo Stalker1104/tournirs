@@ -27,8 +27,8 @@
         <button id="person2" style="background-color:green; position:absolute;top: 73.5%;left: 42.5%;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 9.1%;height: 6%;">Персонаж</button>
         <button id="sumka" style="background-color:green; position:absolute;top: 73.5%;left: 52.13%;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 9.1%;height: 6%;">Сумка</button>
         <button id="altar" style="background-color:green;position: absolute;top: 73.5%;left: 61.75%;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 9.1%;height: 6%;">Алтарь</button>
-        <!--<button id="exit" style="background-color:green;position: absolute;top: 450px;left: 525px;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 9.1%;height: 10%;">ВЫЙТИ</button>
-        --></div>
+        <button id="exit" style="background-color:blue;position: absolute;top: 85%;left: 47%;border-top-width: 0px;border-left-width: 0px;border-bottom-width: 0px;border-right-width: 0px;width: 9.1%;height: 10%;">СОХРАНИТЬ</button>
+    </div>
 
 
     <script>
@@ -202,6 +202,108 @@
         game = 0;
         a = 0;
         var money;
+                exit.onclick=function(){
+    /*10|*/{
+            window.localStorage.setItem('personaj', personaj);
+            window.localStorage.setItem('weapon_weared', weapon_weared);
+            window.localStorage.setItem('armor_weared', armor_weared);
+            window.localStorage.setItem('helmet_weared', helmet_weared);
+            window.localStorage.setItem('number_10_weared', number_10_weared);
+            window.localStorage.setItem('number_9_weared', number_9_weared);
+            window.localStorage.setItem('number_8_weared', number_8_weared);
+            window.localStorage.setItem('number_7_weared', number_7_weared);
+            window.localStorage.setItem('number_6_weared', number_6_weared);
+            window.localStorage.setItem('number_5_weared', number_5_weared);}
+    /*20|*/{
+            window.localStorage.setItem('number_4_weared', number_4_weared);
+            window.localStorage.setItem('number_3_weared', number_3_weared);
+            window.localStorage.setItem('number_2_weared', number_2_weared);
+            window.localStorage.setItem('number_1_weared', number_1_weared);
+            window.localStorage.setItem('weared_weapon', weared_weapon);
+            window.localStorage.setItem('weared_armor', weared_armor);
+            window.localStorage.setItem('weared_helmet', weared_helmet);
+            window.localStorage.setItem('plushp', plushp);
+            window.localStorage.setItem('plusdmg', plusdmg);
+            window.localStorage.setItem('number_10', number_10);}
+    /*30|*/{
+            window.localStorage.setItem('number_9', number_9);
+            window.localStorage.setItem('number_8', number_8);
+            window.localStorage.setItem('number_7', number_7);
+            window.localStorage.setItem('number_6', number_6);
+            window.localStorage.setItem('number_5', number_5);
+            window.localStorage.setItem('number_4', number_4);
+            window.localStorage.setItem('number_3', number_3);
+            window.localStorage.setItem('number_2', number_2);
+            window.localStorage.setItem('number_1', number_1);
+            window.localStorage.setItem('number', number);}
+    /*40|*/{
+            window.localStorage.setItem('money', money);
+            window.localStorage.setItem('n', n);
+            window.localStorage.setItem('invisible_poisions_kol', invisible_poisions_kol);
+            window.localStorage.setItem('dmg_poisions_kol', dmg_poisions_kol);
+            window.localStorage.setItem('hp_poisions_kol', hp_poisions_kol);
+            window.localStorage.setItem('mindmg', mindmg);
+            window.localStorage.setItem('maxdmg', maxdmg);
+            window.localStorage.setItem('altar_number', altar_number);
+            window.localStorage.setItem('dop_hp_helmet_10', dop_hp_helmet_10);
+            window.localStorage.setItem('dop_hp_helmet_9', dop_hp_helmet_9);}
+    /*50|*/{
+            window.localStorage.setItem('dop_hp_helmet_8', dop_hp_helmet_8);
+            window.localStorage.setItem('dop_hp_helmet_7', dop_hp_helmet_7);
+            window.localStorage.setItem('dop_hp_helmet_6', dop_hp_helmet_6);
+            window.localStorage.setItem('dop_hp_helmet_5', dop_hp_helmet_5);
+            window.localStorage.setItem('dop_hp_helmet_4', dop_hp_helmet_4);
+            window.localStorage.setItem('dop_hp_helmet_3', dop_hp_helmet_3);
+            window.localStorage.setItem('dop_hp_helmet_2', dop_hp_helmet_2);
+            window.localStorage.setItem('dop_hp_helmet_1', dop_hp_helmet_1);
+            window.localStorage.setItem('dop_hp_armor_10', dop_hp_armor_10);
+            window.localStorage.setItem('dop_hp_armor_9', dop_hp_armor_9);}
+    /*60|*/{
+            window.localStorage.setItem('dop_hp_armor_8', dop_hp_armor_8);
+            window.localStorage.setItem('dop_hp_armor_7', dop_hp_armor_7);
+            window.localStorage.setItem('dop_hp_armor_6', dop_hp_armor_6);
+            window.localStorage.setItem('dop_hp_armor_5', dop_hp_armor_5);
+            window.localStorage.setItem('dop_hp_armor_4', dop_hp_armor_4);
+            window.localStorage.setItem('dop_hp_armor_3', dop_hp_armor_3);
+            window.localStorage.setItem('dop_hp_armor_2', dop_hp_armor_2);
+            window.localStorage.setItem('dop_hp_armor_1', dop_hp_armor_1);
+            window.localStorage.setItem('dop_dmg_10', dop_dmg_10);
+            window.localStorage.setItem('dop_dmg_9', dop_dmg_9);}
+    /*70|*/{
+            window.localStorage.setItem('dop_dmg_8', dop_dmg_8);
+            window.localStorage.setItem('dop_dmg_7', dop_dmg_7);
+            window.localStorage.setItem('dop_dmg_6', dop_dmg_6);
+            window.localStorage.setItem('dop_dmg_5', dop_dmg_5);
+            window.localStorage.setItem('dop_dmg_4', dop_dmg_4);
+            window.localStorage.setItem('dop_dmg_3', dop_dmg_3);
+            window.localStorage.setItem('dop_dmg_2', dop_dmg_2);
+            window.localStorage.setItem('dop_dmg_1', dop_dmg_1);
+            window.localStorage.setItem('bag_altar_helmet_hp_10', bag_altar_helmet_hp_10);
+            window.localStorage.setItem('bag_altar_helmet_hp_9', bag_altar_helmet_hp_9);}
+    /*80|*/{
+            window.localStorage.setItem('bag_altar_helmet_hp_8', bag_altar_helmet_hp_8);
+            window.localStorage.setItem('bag_altar_helmet_hp_7', bag_altar_helmet_hp_7);
+            window.localStorage.setItem('bag_altar_helmet_hp_6', bag_altar_helmet_hp_6);
+            window.localStorage.setItem('bag_altar_helmet_hp_5', bag_altar_helmet_hp_5);
+            window.localStorage.setItem('bag_altar_helmet_hp_4', bag_altar_helmet_hp_4);
+            window.localStorage.setItem('bag_altar_helmet_hp_3', bag_altar_helmet_hp_3);
+            window.localStorage.setItem('bag_altar_helmet_hp_2', bag_altar_helmet_hp_2);
+            window.localStorage.setItem('bag_altar_helmet_hp_1', bag_altar_helmet_hp_1);
+            window.localStorage.setItem('bag_altar_dmg_10', bag_altar_dmg_10);
+            window.localStorage.setItem('bag_altar_dmg_9', bag_altar_dmg_9);}
+    /*88|*/{
+            window.localStorage.setItem('bag_altar_dmg_8', bag_altar_dmg_8);
+            window.localStorage.setItem('bag_altar_dmg_7', bag_altar_dmg_7);
+            window.localStorage.setItem('bag_altar_dmg_6', bag_altar_dmg_6);
+            window.localStorage.setItem('bag_altar_dmg_5', bag_altar_dmg_5);
+            window.localStorage.setItem('bag_altar_dmg_4', bag_altar_dmg_4);
+            window.localStorage.setItem('bag_altar_dmg_3', bag_altar_dmg_3);
+            window.localStorage.setItem('bag_altar_dmg_2', bag_altar_dmg_2);
+            window.localStorage.setItem('bag_altar_dmg_1', bag_altar_dmg_1);
+}
+            
+            
+        }
     </script>
     <script>
         var parol_1 = "040804";
